@@ -9,10 +9,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountComponent } from './account/account.component';
 import { SettingComponent } from './setting/setting.component';
 
-import { MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule } from "@angular/material";
+import { 
+  MatInputModule, 
+  MatPaginatorModule, 
+  MatProgressSpinnerModule, 
+  MatSortModule, 
+  MatTableModule, 
+  MatButtonModule,
+  MatIconModule  
+} from "@angular/material";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,10 @@ import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
