@@ -6,6 +6,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountComponent } from './account/account.component';
 import { SettingComponent } from './setting/setting.component';
+import { AccountDialogComponent } from './account/account.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { 
@@ -18,7 +19,7 @@ import {
   MatIconModule,
   MatSidenavModule,
   MatListModule,
-  MatDialog  
+  MatDialogModule
 } from "@angular/material";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { HttpClientModule } from '@angular/common/http';
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     DashboardComponent,
     AccountComponent,
-    SettingComponent
+    SettingComponent,
+    AccountDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +47,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatDialog
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AccountDialogComponent]
 })
 export class AppModule { }
