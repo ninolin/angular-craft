@@ -28,9 +28,11 @@ export class AccountComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       });
-   
   }
 
+  showAddAccountDialog(): void {
+
+  }
 }
 
 export interface PeriodicElement {

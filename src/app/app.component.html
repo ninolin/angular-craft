@@ -1,12 +1,14 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<app-navbar></app-navbar> 
-<div class="container-fluid">
-    <div class="row flex-nowrap">
-        <div class="d-none d-md-block col-md-2 slider-class">
-            <app-slidebar></app-slidebar> 
-        </div>
-        <div class="col-md-10">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sideNav.toggle()"><mat-icon>menu</mat-icon></button> My App
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sideNav>
+        <mat-nav-list *ngFor="let menu of menus">
+            <mat-list-item routerLink="/{{menu.name | lowercase}}">{{menu.name}}</mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
