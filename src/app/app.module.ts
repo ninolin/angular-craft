@@ -8,6 +8,7 @@ import { AccountComponent } from './account/account.component';
 import { SettingComponent } from './setting/setting.component';
 import { AccountDialogComponent } from './account/account.component';
 
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { 
   MatInputModule, 
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
     MatButtonModule,
